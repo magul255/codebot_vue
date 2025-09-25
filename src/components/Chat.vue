@@ -46,16 +46,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import MarkdownIt from 'markdown-it'
-import DOMPurify from 'dompurify'
+import { ref, onMounted } from 'vue';
+import MarkdownIt from 'markdown-it';
+import DOMPurify from 'dompurify';
 
 // Markdown text showing
 const md = new MarkdownIt({
   html: false,
   linkify: true,
   breaks: true,
-})
+});
 
 md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
   const i = tokens[idx].attrIndex('target')
@@ -82,17 +82,17 @@ onMounted(() => {
     const raw = sessionStorage.getItem('user_messages')
     if (raw) {
         try {
-            user_messages.value = JSON.parse(raw)
+            user_messages.value = JSON.parse(raw);
         } catch {
-            user_messages.value = []
-            sessionStorage.removeItem('user_messages')
+            user_messages.value = [];
+            sessionStorage.removeItem('user_messages');
         }
     }
 })
 
 async function sendMessage() {
     if (message.value === '' || is_sending.value) {
-        return
+        return;
     }
     
     user_messages.value.push({"from": 11, "to": 1, "message": message.value});
