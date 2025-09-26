@@ -1,8 +1,8 @@
 <template>
   <!-- Navgiation bar-->
-  <!-- <Navbar/> -->
+  <Navbar/>
 
-  <!-- Changed pages-->
+  <!-- Changed pages -->
   <div>
     <router-view/>
   </div>

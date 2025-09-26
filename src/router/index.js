@@ -5,7 +5,7 @@ import Compiler from '../components/HelloWorld.vue'
 
 const routes = [
   { path: '/', name: 'chatbot', component: Chat },
-  // { path: '/compiler', name: 'compiler', component: Compiler },
+  { path: '/compiler', name: 'compiler', component: Compiler },
 
   // 404 error page
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: Page404 },

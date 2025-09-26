@@ -1,6 +1,6 @@
 <template>
 <div class="mx-3">
-  <h1>Hello in CodeBot</h1>
+  <h1>CodeBot compiler wiil be here</h1>
 </div>
 
 <div class="card mx-3">
