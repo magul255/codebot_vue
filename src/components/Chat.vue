@@ -131,7 +131,7 @@ async function getServerResponse(message_priv) {
         return response?.text ?? "Null message";
     } catch (err) {
         // console.log(err)
-        error_messages = err;
+        // error_messages = err;
         return "Error, try again later";
     }
 }

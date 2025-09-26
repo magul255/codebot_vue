@@ -33,38 +33,44 @@ body {
 }
 
 .chat-message {
-    max-width: 75%;
-    word-wrap: break-word;
+  display: flex;
+  max-width: 75%;
+  word-wrap: break-word;
+  overflow-wrap: anywhere; 
 }
 
 .chat-message .bubble {
-    padding: .75rem 1rem;
-    border-radius: 1rem;
+  padding: .75rem 1rem;
+  border-radius: 1rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .chat-message.incoming {
-    margin-left: .75rem;
+  margin-left: .75rem;
+  margin-right: auto;
 }
 
 .chat-message.incoming .bubble {
-    background-color: #cecece;
-    border-bottom-left-radius: 0;
+  background-color: #cecece;
+  border-bottom-left-radius: 0;
 }
 
 .chat-message.outcoming {
-    justify-content: flex-end;
-    margin-right: .75rem;
+  justify-content: flex-end;
+  margin-right: .75rem;
+  margin-left: auto;
 }
 
 .chat-message.outcoming .bubble {
-    background-color: #6A11CB;
-    color: #fff;
-    border-bottom-right-radius: 0;
+  background-color: #6A11CB;
+  color: #fff;
+  border-bottom-right-radius: 0;
 }
 
 .chat-input {
-    border-top: 1px solid #d4d4d4;
-    padding: .75rem;
+  border-top: 1px solid #d4d4d4;
+  padding: .75rem;
 }
 
 
